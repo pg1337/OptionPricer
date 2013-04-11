@@ -1,0 +1,106 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TextView
+        android:id="@+id/text_optiontype"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="26dp"
+        android:text="@string/option_type" />
+
+    <RadioGroup
+        android:id="@+id/radio_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text_optiontype"
+        android:layout_centerHorizontal="true" >
+
+        <RadioButton
+            android:id="@+id/radio1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/radio_call_text" />
+
+        <RadioButton
+            android:id="@+id/radio2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/radio_put_text" />
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/edit_stockprice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/radio_group"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="19dp"
+        android:ems="10"
+        android:hint="@string/stockprice_hint"
+        android:imeOptions="actionNext" >
+
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/edit_strike"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/edit_stockprice"
+        android:layout_below="@+id/edit_stockprice"
+        android:ems="10"
+        android:hint="@string/strike_hint"
+        android:imeOptions="actionNext" />
+
+    <EditText
+        android:id="@+id/edit_vol"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/edit_strike"
+        android:layout_below="@+id/edit_strike"
+        android:ems="10"
+        android:hint="@string/vol_hint"
+        android:imeOptions="actionNext" />
+
+    <EditText
+        android:id="@+id/edit_interestrate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/edit_vol"
+        android:layout_below="@+id/edit_vol"
+        android:ems="10"
+        android:hint="@string/interestrate_hint"
+        android:imeOptions="actionNext" />
+
+    <EditText
+        android:id="@+id/edit_timetoexpiry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/edit_interestrate"
+        android:layout_below="@+id/edit_interestrate"
+        android:ems="10"
+        android:hint="@string/timetoexpiry_hint" />
+
+    <Button
+        android:id="@+id/button_calculate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edit_timetoexpiry"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:text="@string/calculate_text" />
+
+    <TextView
+        android:id="@+id/text_optionvalue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/edit_timetoexpiry"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="29dp"
+        android:text="@string/option_value" />
+
+</RelativeLayout>
